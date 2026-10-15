@@ -15,9 +15,7 @@ import { SiteHeader } from '@/components/site-header';
 import { SideNav } from '@/components/side-nav';
 import { SiteFooter } from '@/components/site-footer';
 import { docsConfig } from '@/config/docs';
-
-import { setViewsServerAction } from './actions/getAndSetViewsServerAction';
-import { getLoveCountServerAction } from './actions/getAndSetLoveCountServerAction';
+import { PageViewTracker } from '@/components/page-view-tracker';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -62,18 +60,7 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-async function loadStats() {
-  try {
-    await setViewsServerAction();
-    await getLoveCountServerAction();
-  } catch (error) {
-    console.error('Failed to load stats:', error);
-    return;
-  }
-}
-
-export default async function RootLayout({ children }: RootLayoutProps) {
-  await loadStats();
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
@@ -105,6 +92,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             disableTransitionOnChange
             enableColorScheme
           >
+            <PageViewTracker enabled={Boolean(process.env.MONGODB_URI)} />
             <div vaul-drawer-wrapper="">
               <div className="relative flex flex-col min-h-svh bg-background">
                 <div
