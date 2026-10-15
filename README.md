@@ -16,7 +16,7 @@ Open http://localhost:3000
 
 ## Live demo
 
-https://portfolio-delta-orpin-89.vercel.app/
+https://portfolio-deepu59.vercel.app/
 
 ## Edit your content
 

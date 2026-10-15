@@ -4,7 +4,7 @@ export const websiteData = {
     location: 'Bardiya, Nepal',
     phone: '+9779816504253',
     email: 'dc7090210@gmail.com',
-    website: 'https://portfolio-delta-orpin-89.vercel.app',
+    website: 'https://portfolio-deepu59.vercel.app',
     github: 'https://github.com/Deepu59',
     linkedin: 'https://linkedin.com/in/dipak-chaudhari-48119140a',
     headline: 'Junior Full-Stack Developer',
