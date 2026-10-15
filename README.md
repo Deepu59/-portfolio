@@ -14,6 +14,10 @@ npm run dev
 
 Open http://localhost:3000
 
+## Live demo
+
+https://portfolio-delta-orpin-89.vercel.app/
+
 ## Edit your content
 
 Almost everything lives in one file: `constants/website-data.ts`
@@ -23,7 +27,7 @@ Change the text there and every page updates.
 - Photo: replace `public/dipak.jpg`
 - Colors: `app/globals.css` (the `:root` and `.dark` blocks)
 - Fonts: `lib/fonts.ts`
-- Site URL: `personal.website` in `constants/website-data.ts` (set to your Vercel URL once deployed)
+- Site URL: `personal.website` in `constants/website-data.ts` (update it if your production domain changes)
 
 ## Turn on the backend features (optional)
 
@@ -40,4 +44,4 @@ Without these, the site still works: the contact form shows an error toast and c
 1. Push this folder to a new GitHub repository.
 2. On vercel.com choose **Add New, Project** and import that repository.
 3. In **Settings, Environment Variables** add the same values you put in `.env.local`.
-4. Deploy, then put your `.vercel.app` address into `personal.website`.
+4. Vercel automatically redeploys each push to the `main` branch.
