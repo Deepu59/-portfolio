@@ -4,6 +4,41 @@ export const websiteData = {
     location: 'Bardiya, Nepal',
     phone: '+9779816504253',
     email: 'dc7090210@gmail.com',
+    website: 'https://www.dipakchaudhari.com.np',
+    github: 'https://github.com/Deepu59',
+    linkedin: 'https://linkedin.com/in/dipak-chaudhari-48119140a',
+    headline: 'Junior Full-Stack Developer',
+    summary:
+      'Junior Full-Stack Developer who enjoys turning everyday problems into clean, working software. I build complete web applications with React on the frontend and Java Spring Boot on the backend, backed by a solid grounding in data structures. Currently a BCA student and Education Officer in robotics, I love explaining ideas simply and I am looking for an internship where I can learn from a real team and ship real features.',
+  },
+  experience: [
+    {
+      title: 'Education Officer',
+      company: 'SKYMYST Robotics Division',
+      location: 'Nepal',
+      period: 'Present',
+      current: true,
+      responsibilities: [
+        'Teach robotics and electronics through hands-on, project-based sessions.',
+        'Guide students from basic concepts to building and testing working models.',
+        'Explain technical ideas clearly, a skill I now bring into software development.',
+      ],
+      technologies: ['Robotics', 'Electronics', 'Teaching'],
+    },
+  ],
+  projects: [
+    {
+      name: 'Task Manager App',
+      category: 'Full Stack Web Application',
+      status: 'Personal Project',
+      github: 'https://github.com/Deepu59/Task-Manager-App',
+      technologies: [
+        'React',export const websiteData = {
+  personal: {
+    name: 'Dipak Chaudhary',
+    location: 'Bardiya, Nepal',
+    phone: '+9779816504253',
+    email: 'dc7090210@gmail.com',
     website: 'https://portfolio-deepu59.vercel.app',
     github: 'https://github.com/Deepu59',
     linkedin: 'https://linkedin.com/in/dipak-chaudhari-48119140a',
