@@ -14,7 +14,9 @@ export function MainNav() {
       </Link>
       <nav className="flex items-center gap-4 text-sm xl:gap-6">
         <Link href="/">Home</Link>
-
+        <Link href="/about" className={cn('flex gap-1')}>
+          About
+        </Link>
         <Link href="/projects" className={cn('flex gap-1')}>
           Projects
         </Link>

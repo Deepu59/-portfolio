@@ -1,76 +1,49 @@
 import {
-  PageActions,
   PageHeader,
   PageHeaderDescription,
   PageHeaderHeading,
 } from '@/components/page-header';
 import Pager from '@/components/pager';
-import { Button } from '@/components/ui/button';
-import { siteConfig } from '@/config/site';
 import { websiteData } from '@/constants/website-data';
-import { Icons } from '@/components/icons';
-import { ArrowRight, ExternalLink, Mail } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
 
-const IntroductionPage = async () => {
+const AboutPage = () => {
   return (
     <>
-      <PageHeader>
-        <Image
-          src="/dipak.jpg"
-          alt={websiteData.personal.name}
-          width={160}
-          height={160}
-          priority
-          className="mb-4 size-32 rounded-full border-4 border-primary/20 object-cover shadow-md sm:size-40"
-        />
-        <span className="mb-3 inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-          <span className="size-1.5 rounded-full bg-primary" />
-          Open to internships
-        </span>
-        <PageHeaderHeading>{websiteData.personal.name}</PageHeaderHeading>
+      <PageHeader className="mb-10">
+        <PageHeaderHeading>About Me</PageHeaderHeading>
         <PageHeaderHeading className="mt-2 text-muted-foreground">
-          {websiteData.personal.headline}
+          Full-stack development, robotics, and teaching.
         </PageHeaderHeading>
         <PageHeaderDescription>
-          {websiteData.personal.summary}
+          I am {websiteData.personal.name}, a {websiteData.personal.headline} based in{' '}
+          {websiteData.personal.location}. I enjoy turning real problems into clear,
+          reliable software and learning by building complete applications.
         </PageHeaderDescription>
-        <PageActions>
-          <Button asChild size="sm" className="rounded-md">
-            <Link href="/projects">
-              View Projects
-              <ArrowRight className="size-3" strokeWidth={2} />
-            </Link>
-          </Button>
-          <Button asChild size="sm" variant="outline" className="rounded-md">
-            <Link href="/contact">
-              <Mail className="size-4" />
-              Contact Me
-            </Link>
-          </Button>
-          <Button asChild size="sm" variant="ghost" className="rounded-md">
-            <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
-              <Icons.gitHub className="size-4" />
-              GitHub
-            </Link>
-          </Button>
-          <Button asChild size="sm" variant="ghost" className="rounded-md">
-            <Link href={siteConfig.links.linkedin} target="_blank" rel="noreferrer">
-              <ExternalLink className="size-4" />
-              LinkedIn
-            </Link>
-          </Button>
-        </PageActions>
       </PageHeader>
+
+      <div className="max-w-3xl space-y-5 text-base leading-7 text-muted-foreground">
+        <p>{websiteData.personal.summary}</p>
+        <p>
+          My current focus is React and Java Spring Boot. I have built REST APIs,
+          connected them to relational databases, and designed responsive web
+          interfaces with a strong focus on usability and maintainable code.
+        </p>
+        <p>
+          I am also an Education Officer in a robotics division, where I teach
+          electronics and guide students through practical projects. This experience
+          has made me comfortable explaining technical ideas and collaborating with
+          people from different backgrounds.
+        </p>
+      </div>
 
       <Pager
         prevHref="/"
-        nextHref="/about"
-        prevTitle="Previous"
-        nextTitle="About Me"
+        nextHref="/projects"
+        prevTitle="Introduction"
+        nextTitle="Projects"
       />
     </>
   );
 };
-export default IntroductionPage;
+
+export default AboutPage;

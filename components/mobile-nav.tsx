@@ -3,6 +3,7 @@
 import * as React from 'react';
 import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/navigation';
+import { Linkedin } from 'lucide-react';
 
 import { docsConfig } from '@/config/docs';
 import { cn } from '@/lib/utils';
@@ -75,6 +76,14 @@ export function MobileNav() {
                   <Icons.gitHub className="size-6" />
                   <span className="sr-only">GitHub</span>
                 </Link>
+                <Link
+                  href={siteConfig.links.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Linkedin className="size-6" />
+                  <span className="sr-only">LinkedIn</span>
+                </Link>
               </div>
             </div>
             <div className="flex flex-col space-y-3">
@@ -129,6 +138,14 @@ export function MobileNav() {
                 >
                   <Icons.gitHub className="w-4 h-4" />
                   <span className="sr-only">GitHub</span>
+                </Link>
+                <Link
+                  href={siteConfig.links.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  <span className="sr-only">LinkedIn</span>
                 </Link>
               </div>
             </div>
