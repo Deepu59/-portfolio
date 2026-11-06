@@ -25,7 +25,7 @@ const ProjectsPage = () => {
           <Card
             title={project.overview}
             key={project.slug}
-            className="relative w-full transition-all duration-300 cursor-pointer isolate hover:scale-105"
+            className="relative w-full transition-all duration-300 cursor-pointer isolate hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
           >
             <CardHeader>
               <CardTitle className="leading-6">{project.title}</CardTitle>

@@ -8,7 +8,8 @@ import Pager from '@/components/pager';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site';
 import { websiteData } from '@/constants/website-data';
-import { ArrowRight, Mail } from 'lucide-react';
+import { Icons } from '@/components/icons';
+import { ArrowRight, ExternalLink, Mail } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -42,10 +43,22 @@ const IntroductionPage = async () => {
               <ArrowRight className="size-3" strokeWidth={2} />
             </Link>
           </Button>
-          <Button asChild size="sm" variant="ghost" className="rounded-md">
-            <Link href={siteConfig.links.email}>
+          <Button asChild size="sm" variant="outline" className="rounded-md">
+            <Link href="/contact">
               <Mail className="size-4" />
-              Send Mail
+              Contact Me
+            </Link>
+          </Button>
+          <Button asChild size="sm" variant="ghost" className="rounded-md">
+            <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
+              <Icons.gitHub className="size-4" />
+              GitHub
+            </Link>
+          </Button>
+          <Button asChild size="sm" variant="ghost" className="rounded-md">
+            <Link href={siteConfig.links.linkedin} target="_blank" rel="noreferrer">
+              <ExternalLink className="size-4" />
+              LinkedIn
             </Link>
           </Button>
         </PageActions>

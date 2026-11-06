@@ -6,7 +6,6 @@ import {
 import Pager from '@/components/pager';
 import TimelineViewer from '@/components/timeline-viewer';
 import { experiences } from '@/constants/experience';
-import { websiteData } from '@/constants/website-data';
 
 const ExperiencePage = () => {
   return (
@@ -17,7 +16,8 @@ const ExperiencePage = () => {
           Where I am learning, teaching, and growing as a developer.
         </PageHeaderHeading>
         <PageHeaderDescription>
-          {websiteData.personal.summary}
+          Hands-on teaching in robotics, alongside my BCA studies and full-stack
+          project work.
         </PageHeaderDescription>
       </PageHeader>
 
@@ -35,4 +35,4 @@ const ExperiencePage = () => {
     </>
   );
 };
-export default ExperiencePage;
+export default ExperiencePage;  
